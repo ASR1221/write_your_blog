@@ -1,0 +1,284 @@
+:root{
+    --primary: #E3DCD2;
+    --secondary: #100C0D;
+    --behi: #CC8b65;
+    --green: #013328;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+/* ========== nav bar ========== */
+
+nav{
+    display: block;
+    background-color: var(--secondary);
+    overflow: hidden;
+    line-height: 1rem;
+    box-shadow: 2px 0 10px var(--secondary);
+}
+
+.nav-logo {
+    padding: 1rem 1rem;
+    float: left;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.nav-list {
+    float: right;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.nav-link{
+    padding: 1rem 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    background-color: var(--behi);
+    color: var(--secondary);
+}
+
+
+/* ============ home page ============ */
+
+.home-aboutBlog,
+.home-readBlogs,
+.addNew,
+.blogDetails{
+    padding: 1rem;
+}
+
+
+.home-intro{
+    height: 100vh;
+    padding: 3rem 0 1rem 0;
+    text-align: center;
+    background: url('images/Blogging-pana.svg') no-repeat 50% 40%;
+
+    background-size: 70% 70%;
+}
+
+.home-intro-h1{
+    font-family: 'Aboreto', cursive;
+    font-size: 2.5rem;
+}
+
+.home-create{
+    background-color: var(--behi);
+    box-shadow: 1px 0 3px  var(--secondary);
+    height: 12rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-aboutBlog,
+.home-readBlogs{
+    margin: 2rem auto;
+}
+
+.home-create-link{
+    text-decoration: none;
+    width: fit-content;
+    padding: .2rem .5rem;
+    border-radius: 7px;
+    background-color: var(--green);
+    color: var(--primary);
+}
+
+.home-aboutBlog-section{
+    height: 12rem;
+    margin: .5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    border: var(--secondary) 2px solid;
+    display: flex;
+    align-items: center;
+}
+
+.home-readBlogs-blogs{
+    background-color: var(--green);
+    height: 7rem;
+    padding: 1rem;
+    margin: .5rem 0;
+    border-radius: 10px;   
+}
+
+.home-readBlogs-blogs h3{
+    padding-bottom: 1rem;
+}
+
+.home-readBlogs-blogs:hover{
+    background-color: var(--secondary);
+}
+
+/* =========== blog details ============ */
+
+.blogDetails,
+.blogDetails-title,
+.addNew,
+.addNew-header{
+    margin: 1rem 0;
+}
+
+.blogDetails-auther{
+    margin-bottom: 1rem;
+}
+
+.blogDetails-body{
+    line-height: 120%;
+}
+
+/* =========== add new blog ============ */
+
+label{
+    display: block;
+    margin: 1.2rem 0 .5rem 0;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: var(--green);
+    color: var(--primary);
+    border: none;
+}
+
+input:focus,
+textarea:focus{
+    outline: 3px solid var(--behi);
+}
+
+.submit{
+    margin: 2rem .5rem;
+    padding: .5rem 1rem;
+    font-size: large;
+    background-color: var(--behi);
+    color: var(--secondary);
+}
+
+.submit:hover{
+    background-color: var(--secondary);
+    color: var(--behi);
+}
+
+/* ============ footer ============= */
+
+.footer{
+    height: 15rem;
+    width: 100%;
+    background-color: var(--secondary);
+    box-shadow: -2px 0 10px var(--secondary);
+    padding: 3rem 0;
+    color: var(--primary);
+}
+
+.footer-auther{
+    text-align: center;
+    font-size: larger;
+}
+
+.footer-accounts{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.footer-accounts-img{
+    width: 3rem;
+    height: 3rem;
+    transition: 1s;
+}
+
+.footer-accounts a{
+    text-decoration: none;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.footer-accounts a:hover,
+.footer-accounts a:focus,
+.footer-accounts a:active{
+    color: red;
+}
+
+.footer-accounts a:hover .accounts-img{
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 580px) {
+    .home-create,
+    .addNew{
+        background-image: url('images/Blogging-amico.svg');
+        background-repeat: no-repeat;
+        background-position: 90%;
+    }
+    
+    .home-create{
+        padding:0 10%;
+    }
+    
+}
+
+@media screen and (min-width: 750px) {
+    .home-aboutBlog,
+    .home-readBlogs,
+    .addNew,
+    .blogDetails{
+        padding: 1rem 4%;
+    }
+
+    .home-readBlogs-flex,
+    .home-aboutBlog{
+        display: grid;
+    }
+
+    .home-aboutBlog{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: .3rem;
+    }
+
+    .home-readBlogs-flex{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .footer-accounts{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .home-aboutBlog,
+    .home-readBlogs,
+    .addNew,
+    .blogDetails{
+        padding: 1rem 20%;
+    }
+}
